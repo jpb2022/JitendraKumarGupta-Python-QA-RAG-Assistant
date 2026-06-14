@@ -1,0 +1,422 @@
+[
+  {
+    "Id": 1,
+    "Title": "How to read a CSV file using pandas",
+    "Body_question": "I have a CSV file on disk. What is the standard way to load it into a pandas DataFrame?",
+    "Body_answer": "Use pandas.read_csv. Example: import pandas as pd; df = pd.read_csv('data.csv'). For large files use chunksize or dtype options. You can also pass usecols to load selected columns only.",
+    "Score_answer": 99
+  },
+  {
+    "Id": 2,
+    "Title": "Difference between list and tuple in Python",
+    "Body_question": "What is the difference between a Python list and a tuple?",
+    "Body_answer": "Lists are mutable sequences created with square brackets []. Tuples are immutable sequences created with parentheses (). Tuples can be used as dict keys and are often faster for fixed collections.",
+    "Score_answer": 98
+  },
+  {
+    "Id": 3,
+    "Title": "Handling missing values in pandas",
+    "Body_question": "How do I handle NaN or missing values in a pandas DataFrame?",
+    "Body_answer": "Detect missing values with df.isna() or df.isnull(). Drop rows with df.dropna() or fill with df.fillna(value) or df.fillna(method='ffill'). Use df.interpolate() for numeric gaps.",
+    "Score_answer": 97
+  },
+  {
+    "Id": 4,
+    "Title": "Python list comprehension example",
+    "Body_question": "Explain list comprehensions with an example.",
+    "Body_answer": "A list comprehension builds a list in one line: squares = [x*x for x in range(10)]. You can add filters: evens = [x for x in range(20) if x % 2 == 0].",
+    "Score_answer": 96
+  },
+  {
+    "Id": 5,
+    "Title": "Install packages with pip",
+    "Body_question": "How do I install Python packages using pip?",
+    "Body_answer": "Run pip install package_name in your terminal. Example: pip install pandas. Use pip install -r requirements.txt to install from a file. Prefer python -m pip install inside virtual environments.",
+    "Score_answer": 95
+  },
+  {
+    "Id": 6,
+    "Title": "What is a Python decorator",
+    "Body_question": "What is a decorator in Python and how do I write one?",
+    "Body_answer": "A decorator wraps a function to extend behavior without changing its source. Example: def logger(fn): def wrapper(*args, **kwargs): print('calling', fn.__name__); return fn(*args, **kwargs); return wrapper. Apply with @logger above a function definition.",
+    "Score_answer": 94
+  },
+  {
+    "Id": 7,
+    "Title": "Merge two DataFrames in pandas",
+    "Body_question": "How do I merge two pandas DataFrames?",
+    "Body_answer": "Use pd.merge(left, right, on='key', how='inner'). Other joins: left, right, outer. For index-based joins use df.join(). Concatenate vertically with pd.concat([df1, df2], ignore_index=True).",
+    "Score_answer": 93
+  },
+  {
+    "Id": 8,
+    "Title": "What is the GIL in Python",
+    "Body_question": "What is the Global Interpreter Lock (GIL) in Python?",
+    "Body_answer": "The GIL is a mutex in CPython that allows only one thread to execute Python bytecode at a time in a single process. It simplifies memory management but limits CPU-bound multithreading. Use multiprocessing for CPU parallelism.",
+    "Score_answer": 92
+  },
+  {
+    "Id": 9,
+    "Title": "Catch exceptions in Python",
+    "Body_question": "How do I catch exceptions in Python?",
+    "Body_answer": "Use try/except: try: risky() except ValueError as e: handle(e) else: success_path() finally: cleanup(). Catch specific exceptions instead of bare except.",
+    "Score_answer": 91
+  },
+  {
+    "Id": 10,
+    "Title": "Convert string to integer safely",
+    "Body_question": "How do I convert a string to an integer safely in Python?",
+    "Body_answer": "Use int(text) inside try/except ValueError. For user input: value = int(input('Enter number: ')). Validate with text.isdigit() for positive integers only.",
+    "Score_answer": 90
+  },
+  {
+    "Id": 11,
+    "Title": "Read JSON file in Python",
+    "Body_question": "How do I read a JSON file in Python?",
+    "Body_answer": "import json; with open('file.json') as f: data = json.load(f). Write with json.dump(data, f, indent=2). For strings use json.loads and json.dumps.",
+    "Score_answer": 89
+  },
+  {
+    "Id": 12,
+    "Title": "Virtual environment in Python",
+    "Body_question": "How do I create and use a virtual environment?",
+    "Body_answer": "Create with python -m venv .venv. Activate: source .venv/bin/activate on Linux/Mac or .venv\\Scripts\\activate on Windows. Install packages inside the venv to isolate dependencies.",
+    "Score_answer": 88
+  },
+  {
+    "Id": 13,
+    "Title": "Sort dictionary by value",
+    "Body_question": "How do I sort a dictionary by value in Python?",
+    "Body_answer": "sorted_items = sorted(d.items(), key=lambda kv: kv[1]). In Python 3.7+ dicts preserve insertion order. Use collections.Counter for frequency sorting.",
+    "Score_answer": 87
+  },
+  {
+    "Id": 14,
+    "Title": "Write to CSV with pandas",
+    "Body_question": "How do I export a DataFrame to CSV?",
+    "Body_answer": "df.to_csv('output.csv', index=False). Use sep='\\t' for TSV. Control missing values with na_rep. For Excel use df.to_excel('out.xlsx', index=False) with openpyxl installed.",
+    "Score_answer": 86
+  },
+  {
+    "Id": 15,
+    "Title": "Python f-strings formatting",
+    "Body_question": "How do f-strings work in Python?",
+    "Body_answer": "f-strings embed expressions: name='Ada'; msg=f'Hello {name}'. Supports formatting: f'{pi:.2f}'. Available in Python 3.6+ and preferred over % or .format for readability.",
+    "Score_answer": 85
+  },
+  {
+    "Id": 16,
+    "Title": "Check if key exists in dictionary",
+    "Body_question": "How do I check whether a key exists in a dict?",
+    "Body_answer": "Use 'key' in my_dict. Retrieve safely with my_dict.get('key', default). Avoid my_dict['key'] unless you want KeyError on missing keys.",
+    "Score_answer": 84
+  },
+  {
+    "Id": 17,
+    "Title": "Iterate over DataFrame rows",
+    "Body_question": "How do I loop over rows in a pandas DataFrame?",
+    "Body_answer": "Prefer vectorized operations. If needed use df.itertuples() for speed or df.iterrows() for Series pairs. Avoid repeated row-wise loops on large frames.",
+    "Score_answer": 83
+  },
+  {
+    "Id": 18,
+    "Title": "Remove duplicates pandas",
+    "Body_question": "How do I remove duplicate rows in pandas?",
+    "Body_answer": "df.drop_duplicates() removes exact duplicate rows. Pass subset=['col'] to dedupe by columns and keep='first' or keep='last'.",
+    "Score_answer": 82
+  },
+  {
+    "Id": 19,
+    "Title": "GroupBy aggregate pandas",
+    "Body_question": "How does groupby work in pandas?",
+    "Body_answer": "df.groupby('category')['sales'].sum(). Chain multiple aggregations: df.groupby('category').agg(total=('sales','sum'), avg=('sales','mean')). Reset index with .reset_index().",
+    "Score_answer": 81
+  },
+  {
+    "Id": 20,
+    "Title": "Python argparse tutorial",
+    "Body_question": "How do I parse command line arguments in Python?",
+    "Body_answer": "Use argparse: parser = argparse.ArgumentParser(); parser.add_argument('--limit', type=int, default=10); args = parser.parse_args(). Access args.limit in your script.",
+    "Score_answer": 80
+  },
+  {
+    "Id": 21,
+    "Title": "Async await basics FastAPI",
+    "Body_question": "Why use async def in FastAPI endpoints?",
+    "Body_answer": "async endpoints allow non-blocking I/O while waiting on network or disk. FastAPI runs sync endpoints in a threadpool. Use async when calling async libraries like httpx.AsyncClient.",
+    "Score_answer": 79
+  },
+  {
+    "Id": 22,
+    "Title": "Type hints in Python",
+    "Body_question": "What are Python type hints?",
+    "Body_answer": "Type hints annotate expected types: def greet(name: str) -> str: return f'Hi {name}'. They are optional at runtime but help static checkers like mypy and improve IDE support.",
+    "Score_answer": 78
+  },
+  {
+    "Id": 23,
+    "Title": "Python enumerate function",
+    "Body_question": "What does enumerate do in Python?",
+    "Body_answer": "enumerate(iterable) yields (index, item) pairs: for i, value in enumerate(['a','b']): print(i, value). Start index at 1 with enumerate(items, start=1).",
+    "Score_answer": 77
+  },
+  {
+    "Id": 24,
+    "Title": "Split string Python",
+    "Body_question": "How do I split strings in Python?",
+    "Body_answer": "text.split(',') splits on comma. Use text.split() for whitespace. For regex splitting import re; re.split(r'\\s+', text). Join with ','.join(parts).",
+    "Score_answer": 76
+  },
+  {
+    "Id": 25,
+    "Title": "Datetime parsing pandas",
+    "Body_question": "How do I parse dates in pandas?",
+    "Body_answer": "pd.to_datetime(df['date_col']). Pass format='%Y-%m-%d' for explicit patterns. Use df['date'].dt.year to extract components after conversion.",
+    "Score_answer": 75
+  },
+  {
+    "Id": 26,
+    "Title": "Requests GET example",
+    "Body_question": "How do I make HTTP GET requests in Python?",
+    "Body_answer": "import requests; r = requests.get('https://api.example.com/data', timeout=30); r.raise_for_status(); data = r.json(). Set headers and params as needed.",
+    "Score_answer": 74
+  },
+  {
+    "Id": 27,
+    "Title": "Context manager with statement",
+    "Body_question": "What is a context manager in Python?",
+    "Body_answer": "Context managers guarantee setup/teardown with the with statement: with open('file.txt') as f: content = f.read(). Implement __enter__ and __exit__ or use contextlib.contextmanager.",
+    "Score_answer": 73
+  },
+  {
+    "Id": 28,
+    "Title": "Set vs list Python",
+    "Body_question": "When should I use a set instead of a list?",
+    "Body_answer": "Sets store unique unordered elements and support fast membership tests. Use set(list_items) to deduplicate. Operations include union, intersection, and difference.",
+    "Score_answer": 72
+  },
+  {
+    "Id": 29,
+    "Title": "Map filter lambda Python",
+    "Body_question": "Explain map, filter, and lambda in Python.",
+    "Body_answer": "lambda creates small anonymous functions: lambda x: x*2. map(fn, iterable) applies fn to each item. filter(fn, iterable) keeps items where fn returns True. List comprehensions often replace these.",
+    "Score_answer": 71
+  },
+  {
+    "Id": 30,
+    "Title": "Read Excel pandas",
+    "Body_question": "How do I read Excel files with pandas?",
+    "Body_answer": "pd.read_excel('file.xlsx', sheet_name='Sheet1'). Requires openpyxl or xlrd depending on format. Read all sheets with sheet_name=None returning a dict of DataFrames.",
+    "Score_answer": 70
+  },
+  {
+    "Id": 31,
+    "Title": "Numpy Array Creation",
+    "Body_question": "Can you explain numpy array creation in Python?",
+    "Body_answer": "Create arrays with import numpy as np; arr = np.array([1,2,3]). Use np.zeros, np.ones, np.arange, and np.linspace for common patterns.",
+    "Score_answer": 89
+  },
+  {
+    "Id": 32,
+    "Title": "Matplotlib Basic Plot",
+    "Body_question": "Can you explain matplotlib basic plot in Python?",
+    "Body_answer": "import matplotlib.pyplot as plt; plt.plot(x, y); plt.xlabel('x'); plt.ylabel('y'); plt.title('Title'); plt.show().",
+    "Score_answer": 88
+  },
+  {
+    "Id": 33,
+    "Title": "Scikit-Learn Train Test Split",
+    "Body_question": "Can you explain scikit-learn train test split in Python?",
+    "Body_answer": "from sklearn.model_selection import train_test_split; X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42).",
+    "Score_answer": 87
+  },
+  {
+    "Id": 34,
+    "Title": "Python Pathlib Usage",
+    "Body_question": "Can you explain python pathlib usage in Python?",
+    "Body_answer": "from pathlib import Path; p = Path('data/file.txt'); p.exists(); p.read_text(); p.parent.mkdir(parents=True, exist_ok=True).",
+    "Score_answer": 86
+  },
+  {
+    "Id": 35,
+    "Title": "Python Logging Basicconfig",
+    "Body_question": "Can you explain python logging basicConfig in Python?",
+    "Body_answer": "import logging; logging.basicConfig(level=logging.INFO); logger = logging.getLogger(__name__); logger.info('message').",
+    "Score_answer": 85
+  },
+  {
+    "Id": 36,
+    "Title": "Python Dataclass Example",
+    "Body_question": "Can you explain python dataclass example in Python?",
+    "Body_answer": "from dataclasses import dataclass; @dataclass class User: name: str; age: int; u = User('Ann', 30).",
+    "Score_answer": 84
+  },
+  {
+    "Id": 37,
+    "Title": "Python Zip Function",
+    "Body_question": "Can you explain python zip function in Python?",
+    "Body_answer": "pairs = list(zip([1,2], ['a','b'])). Unzip with a, b = zip(*pairs). Useful for parallel iteration.",
+    "Score_answer": 83
+  },
+  {
+    "Id": 38,
+    "Title": "Python Any All Functions",
+    "Body_question": "Can you explain python any all functions in Python?",
+    "Body_answer": "any(iterable) returns True if any element is truthy. all(iterable) returns True if all elements are truthy.",
+    "Score_answer": 82
+  },
+  {
+    "Id": 39,
+    "Title": "Pandas Apply Function",
+    "Body_question": "Can you explain pandas apply function in Python?",
+    "Body_answer": "df['col2'] = df['col1'].apply(lambda x: x * 2). For row-wise logic use axis=1 carefully or prefer vectorization.",
+    "Score_answer": 81
+  },
+  {
+    "Id": 40,
+    "Title": "Pandas Query Method",
+    "Body_question": "Can you explain pandas query method in Python?",
+    "Body_answer": "df.query('age > 30 and city == \"NYC\"') filters rows using a string expression.",
+    "Score_answer": 80
+  },
+  {
+    "Id": 41,
+    "Title": "Python Property Decorator",
+    "Body_question": "Can you explain python property decorator in Python?",
+    "Body_answer": "@property def volume(self): return self.width * self.height. Use for computed attributes with getter semantics.",
+    "Score_answer": 79
+  },
+  {
+    "Id": 42,
+    "Title": "Python Super Init",
+    "Body_question": "Can you explain python super init in Python?",
+    "Body_answer": "class Child(Parent): def __init__(self, x): super().__init__(); self.x = x. Calls parent initializer in inheritance.",
+    "Score_answer": 78
+  },
+  {
+    "Id": 43,
+    "Title": "Python Copy Deepcopy",
+    "Body_question": "Can you explain python copy deepcopy in Python?",
+    "Body_answer": "import copy; shallow = copy.copy(obj); deep = copy.deepcopy(obj). Deep copy duplicates nested structures.",
+    "Score_answer": 77
+  },
+  {
+    "Id": 44,
+    "Title": "Python Hashable Types",
+    "Body_question": "Can you explain python hashable types in Python?",
+    "Body_answer": "Dict keys must be hashable: str, int, tuple of hashables. Lists are not hashable and cannot be dict keys.",
+    "Score_answer": 76
+  },
+  {
+    "Id": 45,
+    "Title": "Python Generator Yield",
+    "Body_question": "Can you explain python generator yield in Python?",
+    "Body_answer": "def gen(): yield 1; yield 2. Generators produce lazy sequences and save memory for large streams.",
+    "Score_answer": 75
+  },
+  {
+    "Id": 46,
+    "Title": "Python Itertools Combinations",
+    "Body_question": "Can you explain python itertools combinations in Python?",
+    "Body_answer": "from itertools import combinations; list(combinations([1,2,3], 2)) gives pairs without repetition.",
+    "Score_answer": 74
+  },
+  {
+    "Id": 47,
+    "Title": "Python Collections Counter",
+    "Body_question": "Can you explain python collections Counter in Python?",
+    "Body_answer": "from collections import Counter; Counter(['a','b','a']).most_common(1) counts frequencies.",
+    "Score_answer": 73
+  },
+  {
+    "Id": 48,
+    "Title": "Python Collections Defaultdict",
+    "Body_question": "Can you explain python collections defaultdict in Python?",
+    "Body_answer": "from collections import defaultdict; d = defaultdict(list); d['key'].append(1) avoids KeyError.",
+    "Score_answer": 72
+  },
+  {
+    "Id": 49,
+    "Title": "Python Unittest Example",
+    "Body_question": "Can you explain python unittest example in Python?",
+    "Body_answer": "import unittest; class TestMath(unittest.TestCase): def test_add(self): self.assertEqual(1+1, 2). Run with unittest.main().",
+    "Score_answer": 71
+  },
+  {
+    "Id": 50,
+    "Title": "Python Pytest Parametrize",
+    "Body_question": "Can you explain python pytest parametrize in Python?",
+    "Body_answer": "import pytest; @pytest.mark.parametrize('x,y,expected', [(1,2,3)]) def test_add(x,y,expected): assert x+y == expected.",
+    "Score_answer": 70
+  },
+  {
+    "Id": 51,
+    "Title": "Python Regex Re Search",
+    "Body_question": "Can you explain python regex re search in Python?",
+    "Body_answer": "import re; m = re.search(r'\\d+', 'abc123'); m.group() if m else None extracts first digit sequence.",
+    "Score_answer": 69
+  },
+  {
+    "Id": 52,
+    "Title": "Python Os Path Join",
+    "Body_question": "Can you explain python os path join in Python?",
+    "Body_answer": "import os; path = os.path.join('data', 'file.csv'). Prefer pathlib Path for modern code.",
+    "Score_answer": 68
+  },
+  {
+    "Id": 53,
+    "Title": "Python Subprocess Run",
+    "Body_question": "Can you explain python subprocess run in Python?",
+    "Body_answer": "import subprocess; subprocess.run(['python', '--version'], check=True, capture_output=True, text=True).",
+    "Score_answer": 67
+  },
+  {
+    "Id": 54,
+    "Title": "Python Json Serializable Datetime",
+    "Body_question": "Can you explain python json serializable datetime in Python?",
+    "Body_answer": "Convert datetime with default=str in json.dumps or custom JSONEncoder because datetime is not JSON serializable by default.",
+    "Score_answer": 66
+  },
+  {
+    "Id": 55,
+    "Title": "Python Pandas Melt",
+    "Body_question": "Can you explain python pandas melt in Python?",
+    "Body_answer": "pd.melt(df, id_vars=['id'], value_vars=['A','B']) converts wide to long format.",
+    "Score_answer": 65
+  },
+  {
+    "Id": 56,
+    "Title": "Python Pandas Pivot",
+    "Body_question": "Can you explain python pandas pivot in Python?",
+    "Body_answer": "df.pivot(index='date', columns='category', values='sales') reshapes data.",
+    "Score_answer": 64
+  },
+  {
+    "Id": 57,
+    "Title": "Python Pandas Concat Axis",
+    "Body_question": "Can you explain python pandas concat axis in Python?",
+    "Body_answer": "pd.concat([df1, df2], axis=0) stacks vertically; axis=1 joins horizontally.",
+    "Score_answer": 63
+  },
+  {
+    "Id": 58,
+    "Title": "Python Seaborn Scatterplot",
+    "Body_question": "Can you explain python seaborn scatterplot in Python?",
+    "Body_answer": "import seaborn as sns; sns.scatterplot(data=df, x='x', y='y', hue='category').",
+    "Score_answer": 62
+  },
+  {
+    "Id": 59,
+    "Title": "Python Train Validation Leakage",
+    "Body_question": "Can you explain python train validation leakage in Python?",
+    "Body_answer": "Always split before preprocessing fit steps. Use Pipeline in sklearn to avoid data leakage.",
+    "Score_answer": 61
+  },
+  {
+    "Id": 60,
+    "Title": "Python Pickle Security",
+    "Body_question": "Can you explain python pickle security in Python?",
+    "Body_answer": "Never unpickle untrusted data. pickle can execute arbitrary code during load.",
+    "Score_answer": 60
+  }
+]

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: python-qa-assistant
+    env: python
+    buildCommand: pip install -r requirements.txt && python scripts/create_sample_data.py && python scripts/ingest_data.py --limit 500
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash
+      - key: GEMINI_EMBEDDING_MODEL
+        value: models/gemini-embedding-001
+      - key: PYTHONPATH
+        value: .
